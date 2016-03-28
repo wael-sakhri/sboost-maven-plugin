@@ -2,11 +2,11 @@ package io.sakhri.sourceboost.exception;
 
 import org.springframework.http.HttpStatus;
 
-import io.sakhri.codegen.generics.ResponseData;
-import io.sakhri.codegen.type.CodeTypes.AttributeCode;
-import io.sakhri.codegen.type.CodeTypes.OperationCode;
-import io.sakhri.codegen.type.CodeTypes.ServiceCode;
-import io.sakhri.codegen.type.CodeTypes.ValidatorCode;
+import io.sakhri.sourceboost.generic.ResponseData;
+import io.sakhri.sourceboost.type.CodeTypes.AttributeCode;
+import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
+import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
+import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 public class ValidationException extends AbstractException {
 

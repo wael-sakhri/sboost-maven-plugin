@@ -14,6 +14,7 @@ import java.io.IOException;
 /**
  * Goal which generate java sources.
  *
+ * @author Wael.Sakhri
  */
 @Mojo( name = "gen", defaultPhase = LifecyclePhase.PROCESS_SOURCES )
 public class Boost

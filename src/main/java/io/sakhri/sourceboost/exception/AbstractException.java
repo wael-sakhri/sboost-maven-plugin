@@ -1,12 +1,12 @@
-package io.sakhri.codegen.exception;
+package io.sakhri.sourceboost.exception;
 
 import org.springframework.http.HttpStatus;
 
-import io.sakhri.codegen.generics.CodeGenerator;
-import io.sakhri.codegen.generics.ResponseData;
-import io.sakhri.codegen.type.CodeTypes;
-import io.sakhri.codegen.type.CodeTypes.OperationCode;
-import io.sakhri.codegen.type.CodeTypes.ServiceCode;
+import io.sakhri.sourceboost.generic.CodeGenerator;
+import io.sakhri.sourceboost.generic.ResponseData;
+import io.sakhri.sourceboost.type.CodeTypes;
+import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
+import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
 
 public abstract class AbstractException extends Exception {
 
