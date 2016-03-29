@@ -15,7 +15,7 @@ public abstract class BoxyAbstractFacade<E extends BoxyModel>
 	@Override
 	public ResponseData getAll() throws OperationNotSupportedException {
 
-		ResponseData data = new ResponseData("SUCCESS", "", getService().getModuleName(), HttpStatus.OK);
+		ResponseData data = new ResponseData("SUCCESS", "", getService().getServiceName(), HttpStatus.OK);
 
 		try {
 			data.setResponseData(getService().getAll());
@@ -33,7 +33,7 @@ public abstract class BoxyAbstractFacade<E extends BoxyModel>
 	@Override
 	public ResponseData create(E element) throws OperationNotSupportedException {
 
-		ResponseData data = new ResponseData("SUCCESS", "", getService().getModuleName(), HttpStatus.OK);
+		ResponseData data = new ResponseData("SUCCESS", "", getService().getServiceName(), HttpStatus.OK);
 
 		try {
 			data.setResponseData(getService().create(element));
@@ -51,7 +51,7 @@ public abstract class BoxyAbstractFacade<E extends BoxyModel>
 	@Override
 	public ResponseData update(E element) throws OperationNotSupportedException {
 
-		ResponseData data = new ResponseData("SUCCESS", "", getService().getModuleName(), HttpStatus.OK);
+		ResponseData data = new ResponseData("SUCCESS", "", getService().getServiceName(), HttpStatus.OK);
 
 		try {
 			data.setResponseData(getService().save(element));
@@ -67,7 +67,7 @@ public abstract class BoxyAbstractFacade<E extends BoxyModel>
 	@Override
 	public ResponseData get(Long id) throws OperationNotSupportedException {
 
-		ResponseData data = new ResponseData("SUCCESS", "", getService().getModuleName(), HttpStatus.OK);
+		ResponseData data = new ResponseData("SUCCESS", "", getService().getServiceName(), HttpStatus.OK);
 
 		try {
 			data.setResponseData(getService().get(id));
@@ -85,7 +85,7 @@ public abstract class BoxyAbstractFacade<E extends BoxyModel>
 	@Override
 	public ResponseData getByCode(String code) throws OperationNotSupportedException {
 
-		ResponseData data = new ResponseData("SUCCESS", "", getService().getModuleName(), HttpStatus.OK);
+		ResponseData data = new ResponseData("SUCCESS", "", getService().getServiceName(), HttpStatus.OK);
 
 		try {
 			data.setResponseData(getService().getByCode(code));
@@ -103,7 +103,7 @@ public abstract class BoxyAbstractFacade<E extends BoxyModel>
 	@Override
 	public ResponseData delete(Long id) throws OperationNotSupportedException {
 
-		ResponseData data = new ResponseData("SUCCESS", "", getService().getModuleName(), HttpStatus.OK);
+		ResponseData data = new ResponseData("SUCCESS", "", getService().getServiceName(), HttpStatus.OK);
 
 		try {
 			getService().delete(id);

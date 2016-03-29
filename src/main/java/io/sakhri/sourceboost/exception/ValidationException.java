@@ -5,7 +5,6 @@ import org.springframework.http.HttpStatus;
 import io.sakhri.sourceboost.generic.ResponseData;
 import io.sakhri.sourceboost.type.CodeTypes.AttributeCode;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
-import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
 import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 public class ValidationException extends AbstractException {
@@ -17,7 +16,7 @@ public class ValidationException extends AbstractException {
 	private ValidatorCode validatorCode;
 	private AttributeCode attribueCode;
 
-	public ValidationException(ServiceCode serviceCode, OperationCode operationCode, AttributeCode attribueCode,
+	public ValidationException(String serviceCode, OperationCode operationCode, AttributeCode attribueCode,
 			ValidatorCode validatorCode, String message, HttpStatus status) {
 		super(serviceCode, operationCode, message, status);
 

@@ -6,7 +6,6 @@ import io.sakhri.sourceboost.generic.CodeGenerator;
 import io.sakhri.sourceboost.generic.ResponseData;
 import io.sakhri.sourceboost.type.CodeTypes;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
-import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
 
 public abstract class AbstractException extends Exception {
 
@@ -17,8 +16,8 @@ public abstract class AbstractException extends Exception {
 
 	private CodeGenerator generator;
 
-	private CodeTypes.ServiceCode serviceCode;
-	private CodeTypes.OperationCode operationCode;
+	private String serviceCode;
+	private OperationCode operationCode;
 
 	private String message;
 	private HttpStatus status;
@@ -29,7 +28,7 @@ public abstract class AbstractException extends Exception {
 		generator = new CodeGenerator();
 	}
 
-	public AbstractException(CodeTypes.ServiceCode serviceCode, CodeTypes.OperationCode operationCode, String message,
+	public AbstractException(String serviceCode, CodeTypes.OperationCode operationCode, String message,
 			HttpStatus status) {
 		super();
 		this.serviceCode = serviceCode;
@@ -38,7 +37,7 @@ public abstract class AbstractException extends Exception {
 		this.message = message;
 	}
 
-	public AbstractException(ServiceCode serviceCode, OperationCode operationCode, String message, HttpStatus status,
+	public AbstractException(String serviceCode, OperationCode operationCode, String message, HttpStatus status,
 			boolean warning, Object target) {
 		super();
 		this.serviceCode = serviceCode;
@@ -49,11 +48,11 @@ public abstract class AbstractException extends Exception {
 		this.target = target;
 	}
 
-	public CodeTypes.ServiceCode getServiceCode() {
+	public String getServiceCode() {
 		return serviceCode;
 	}
 
-	public void setServiceCode(CodeTypes.ServiceCode serviceCode) {
+	public void setServiceCode(String serviceCode) {
 		this.serviceCode = serviceCode;
 	}
 

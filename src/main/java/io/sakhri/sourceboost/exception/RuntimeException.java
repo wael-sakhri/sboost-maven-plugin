@@ -4,17 +4,16 @@ import org.springframework.http.HttpStatus;
 
 import io.sakhri.sourceboost.generic.ResponseData;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
-import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
 
 public class RuntimeException extends AbstractException {
 
 	private static final long serialVersionUID = 1L;
 
-	public RuntimeException(ServiceCode serviceCode, OperationCode operationCode, String message, HttpStatus status) {
+	public RuntimeException(String serviceCode, OperationCode operationCode, String message, HttpStatus status) {
 		super(serviceCode, operationCode, message, status);
 	}
 
-	public RuntimeException(ServiceCode serviceCode, OperationCode operationCode, String message, HttpStatus status,
+	public RuntimeException(String serviceCode, OperationCode operationCode, String message, HttpStatus status,
 			boolean warning, Object target) {
 		super(serviceCode, operationCode, message, status, warning, target);
 	}

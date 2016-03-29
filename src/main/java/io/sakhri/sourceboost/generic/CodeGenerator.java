@@ -10,7 +10,6 @@ import io.sakhri.sourceboost.exception.AbstractException;
 import io.sakhri.sourceboost.exception.ValidationException;
 import io.sakhri.sourceboost.type.CodeTypes.AttributeCode;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
-import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
 import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 @Service
@@ -29,9 +28,9 @@ public class CodeGenerator implements BoxyGlobalConfig {
 
 	}
 
-	public String generateErrorCode(ServiceCode service, OperationCode operationCode, AttributeCode attributeCode,
+	public String generateErrorCode(String serviceCode, OperationCode operationCode, AttributeCode attributeCode,
 			ValidatorCode validator) {
-		return getCodePrefix() + "-" + service.getCode() + operationCode.getCode() + attributeCode.getCode()
+		return getCodePrefix() + "-" + serviceCode + operationCode.getCode() + attributeCode.getCode()
 				+ validator.getCode() + "-" + getCodeSuffix();
 	}
 

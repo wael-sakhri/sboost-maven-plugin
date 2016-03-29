@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import io.sakhri.sourceboost.exception.RuntimeException;
 import io.sakhri.sourceboost.exception.ValidationException;
-import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
 
 @Service
 public interface BoxyGenericServiceApi<E extends BoxyModel> {
@@ -91,18 +90,18 @@ public interface BoxyGenericServiceApi<E extends BoxyModel> {
 	public void initData();
 
 	/**
-	 * Return the name of the current module
+	 * Return the code of the current service
 	 * 
 	 * @return String
 	 */
-	public String getModuleName();
+	public String getServiceCode();
 
 	/**
-	 * Return the global error code of the module
+	 * Return the name of the current service
 	 * 
 	 * @return String
 	 */
-	public ServiceCode getServiceCode();
+	public String getServiceName();
 
 	/**
 	 * Return the global error code of the module

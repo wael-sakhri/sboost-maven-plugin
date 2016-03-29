@@ -13,7 +13,6 @@ import io.sakhri.sourceboost.exception.RuntimeException;
 import io.sakhri.sourceboost.exception.ValidationException;
 import io.sakhri.sourceboost.type.CodeTypes.AttributeCode;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
-import io.sakhri.sourceboost.type.CodeTypes.ServiceCode;
 import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 @Service
@@ -140,7 +139,7 @@ public abstract class BoxyAbstractService<E extends BoxyModel>
 	public boolean isValidId(Long id, OperationCode operationCode) throws ValidationException {
 
 		if (id == null) {
-			throw new IdValidationException(ServiceCode.UNDEFINED, operationCode, ValidatorCode.NULL_POINTER, "",
+			throw new IdValidationException("UNDEFINED", operationCode, ValidatorCode.NULL_POINTER, "",
 					HttpStatus.NOT_ACCEPTABLE);
 		}
 
@@ -191,10 +190,10 @@ public abstract class BoxyAbstractService<E extends BoxyModel>
 	}
 	
 	@Override
-	public String getModuleName() {
-
-		return getServiceCode().getValue();
-	}
+	public abstract String getServiceName();
+	
+	@Override
+	public abstract String getServiceCode();
 	
 	@Override
 	public void initData() {
