@@ -4,9 +4,11 @@ import javax.naming.OperationNotSupportedException;
 
 import org.springframework.stereotype.Service;
 
+import io.sakhri.sourceboost.model.ResponseData;
+
 
 @Service
-public interface BoxyGenericFacadeApi<E extends BoxyModel> {
+public interface BoostGenericFacadeApi<E extends BoostModel> {
 
 	public ResponseData getAll() throws OperationNotSupportedException;
 

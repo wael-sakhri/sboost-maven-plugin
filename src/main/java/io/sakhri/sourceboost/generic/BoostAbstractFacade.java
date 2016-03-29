@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import io.sakhri.sourceboost.exception.RuntimeException;
 import io.sakhri.sourceboost.exception.ValidationException;
+import io.sakhri.sourceboost.model.ResponseData;
 
 @Service
-public abstract class BoxyAbstractFacade<E extends BoxyModel>
-		implements BoxyGenericFacadeApi<E> {
+public abstract class BoostAbstractFacade<E extends BoostModel>
+		implements BoostGenericFacadeApi<E> {
 
 	@Override
 	public ResponseData getAll() throws OperationNotSupportedException {
@@ -118,6 +119,6 @@ public abstract class BoxyAbstractFacade<E extends BoxyModel>
 		return data;
 	}
 
-	public abstract BoxyAbstractService<E> getService() throws OperationNotSupportedException;
+	public abstract BoostAbstractService<E> getService() throws OperationNotSupportedException;
 
 }

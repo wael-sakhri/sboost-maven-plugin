@@ -2,7 +2,7 @@ package io.sakhri.sourceboost.exception;
 
 import org.springframework.http.HttpStatus;
 
-import io.sakhri.sourceboost.generic.ResponseData;
+import io.sakhri.sourceboost.model.ResponseData;
 import io.sakhri.sourceboost.type.CodeTypes.AttributeCode;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
 import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;

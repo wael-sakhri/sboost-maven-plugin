@@ -1,6 +1,6 @@
 package io.sakhri.sourceboost.generic;
 
-public interface BoxyGlobalConfig {
+public interface BoostGlobalConfig {
 
 	/**
 	 * Version of the current application

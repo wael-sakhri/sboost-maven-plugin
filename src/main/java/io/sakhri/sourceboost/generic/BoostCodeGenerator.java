@@ -14,7 +14,7 @@ import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 @Service
 @PropertySource("classpath:config.properties")
-public class CodeGenerator implements BoxyGlobalConfig {
+public class BoostCodeGenerator implements BoostGlobalConfig {
 
 	public String generateErrorCode(AbstractException e) {
 

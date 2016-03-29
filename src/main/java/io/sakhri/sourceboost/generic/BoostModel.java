@@ -2,7 +2,7 @@ package io.sakhri.sourceboost.generic;
 
 import java.io.Serializable;
 
-public interface BoxyModel extends Serializable{
+public interface BoostModel extends Serializable{
 
 	/**
 	 * Serial version

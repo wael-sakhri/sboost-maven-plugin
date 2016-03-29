@@ -1,6 +1,6 @@
 package io.sakhri.sourceboost.generic;
 
-public abstract class ApiController {
+public abstract class BoostApiController {
 
 	public static final String API_PATH = "/api/v1";
 	public static final String GET_ALL = "/get/all";

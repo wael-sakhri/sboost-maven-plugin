@@ -16,8 +16,8 @@ import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
 import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 @Service
-public abstract class BoxyAbstractService<E extends BoxyModel>
-		implements BoxyGenericServiceApi<E>, BoxyValidatorApi<E> {
+public abstract class BoostAbstractService<E extends BoostModel>
+		implements BoostGenericServiceApi<E>, BoostValidatorApi<E> {
 
 	@Override
 	public Collection<E> getAll() throws ValidationException, RuntimeException {
@@ -83,9 +83,9 @@ public abstract class BoxyAbstractService<E extends BoxyModel>
 
 		isValidElement(element, code);
 
-		if (element instanceof BoxyIdentifiableModel) {
-			isValidCode(((BoxyIdentifiableModel) element).getCode(), element.getId(), code);
-			isValidLibele(((BoxyIdentifiableModel) element).getLibele(), code);
+		if (element instanceof BoostIdentifiableModel) {
+			isValidCode(((BoostIdentifiableModel) element).getCode(), element.getId(), code);
+			isValidLibele(((BoostIdentifiableModel) element).getLibele(), code);
 		}
 
 		try {
@@ -108,9 +108,9 @@ public abstract class BoxyAbstractService<E extends BoxyModel>
 
 		isValidId(element.getId(), code);
 
-		if (element instanceof BoxyIdentifiableModel) {
-			isValidCode(((BoxyIdentifiableModel) element).getCode(), element.getId(), code);
-			isValidLibele(((BoxyIdentifiableModel) element).getLibele(), code);
+		if (element instanceof BoostIdentifiableModel) {
+			isValidCode(((BoostIdentifiableModel) element).getCode(), element.getId(), code);
+			isValidLibele(((BoostIdentifiableModel) element).getLibele(), code);
 		}
 
 		try {
@@ -154,7 +154,7 @@ public abstract class BoxyAbstractService<E extends BoxyModel>
 					HttpStatus.NOT_ACCEPTABLE);
 		}
 
-		if (code.length() < BoxyGlobalConfig.CODE_MINIMUM_LENGTH) {
+		if (code.length() < BoostGlobalConfig.CODE_MINIMUM_LENGTH) {
 			throw new CodeValidationException(this.getServiceCode(), operationCode, ValidatorCode.NOT_VALID, "",
 					HttpStatus.NOT_ACCEPTABLE);
 		}
@@ -180,7 +180,7 @@ public abstract class BoxyAbstractService<E extends BoxyModel>
 					HttpStatus.NOT_ACCEPTABLE);
 		}
 
-		if (libele.length() < BoxyGlobalConfig.LABEL_MINIMUM_LENGTH) {
+		if (libele.length() < BoostGlobalConfig.LABEL_MINIMUM_LENGTH) {
 			throw new LabelValidationException(this.getServiceCode(), operationCode, ValidatorCode.NOT_VALID, "",
 					HttpStatus.NOT_ACCEPTABLE);
 

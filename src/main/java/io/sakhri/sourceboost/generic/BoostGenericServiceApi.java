@@ -8,7 +8,7 @@ import io.sakhri.sourceboost.exception.RuntimeException;
 import io.sakhri.sourceboost.exception.ValidationException;
 
 @Service
-public interface BoxyGenericServiceApi<E extends BoxyModel> {
+public interface BoostGenericServiceApi<E extends BoostModel> {
 
 	/**
 	 * Get all element from the database using T Repository
@@ -108,6 +108,6 @@ public interface BoxyGenericServiceApi<E extends BoxyModel> {
 	 * 
 	 * @return String
 	 */
-	public BoxyJpaRepository<E> getRepository();
+	public BoostJpaRepository<E> getRepository();
 
 }

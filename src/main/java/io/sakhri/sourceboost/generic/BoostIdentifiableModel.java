@@ -5,7 +5,7 @@ package io.sakhri.sourceboost.generic;
  * @author Wael Sakhri 
  *
  */
-public interface BoxyIdentifiableModel extends BoxyModel {
+public interface BoostIdentifiableModel extends BoostModel {
 
 	/**
 	 * Get entity unique code

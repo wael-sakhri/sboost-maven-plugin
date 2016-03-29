@@ -1,4 +1,4 @@
-package io.sakhri.sourceboost.generic;
+package io.sakhri.sourceboost.model;
 
 import java.util.ArrayList;
 import java.util.List;

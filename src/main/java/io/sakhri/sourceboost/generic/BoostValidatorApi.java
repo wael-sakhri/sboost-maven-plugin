@@ -3,7 +3,7 @@ package io.sakhri.sourceboost.generic;
 import io.sakhri.sourceboost.exception.ValidationException;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
 
-public interface BoxyValidatorApi<E extends BoxyModel> {
+public interface BoostValidatorApi<E extends BoostModel> {
 
 	/**
 	 * Test if the id is valid

@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.sakhri.sourceboost.model.ResponseData;
+
 @RestController
-public abstract class BoxyAbstractController<T extends BoxyModel> extends ApiController {
+public abstract class BoostAbstractController<T extends BoostModel> extends BoostApiController {
 
 	@RequestMapping(method = RequestMethod.GET, value = GET_ALL)
 	public ResponseEntity<ResponseData> getAll() throws OperationNotSupportedException {
@@ -54,5 +56,5 @@ public abstract class BoxyAbstractController<T extends BoxyModel> extends ApiCon
 		return new ResponseEntity<ResponseData>(msg, msg.getStatus());
 	}
 
-	protected abstract BoxyAbstractFacade<T> getFacade() throws OperationNotSupportedException;
+	protected abstract BoostAbstractFacade<T> getFacade() throws OperationNotSupportedException;
 }
