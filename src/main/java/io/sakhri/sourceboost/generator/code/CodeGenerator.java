@@ -1,4 +1,4 @@
-package io.sakhri.sourceboost.generic;
+package io.sakhri.sourceboost.generator.code;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,13 +8,14 @@ import org.springframework.stereotype.Service;
 
 import io.sakhri.sourceboost.exception.AbstractException;
 import io.sakhri.sourceboost.exception.ValidationException;
+import io.sakhri.sourceboost.generic.BoostGlobalConfig;
 import io.sakhri.sourceboost.type.CodeTypes.AttributeCode;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
 import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 @Service
 @PropertySource("classpath:config.properties")
-public class BoostCodeGenerator implements BoostGlobalConfig {
+public class CodeGenerator implements BoostGlobalConfig {
 
 	public String generateErrorCode(AbstractException e) {
 

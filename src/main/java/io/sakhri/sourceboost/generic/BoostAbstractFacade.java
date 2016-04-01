@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import io.sakhri.sourceboost.exception.RuntimeException;
 import io.sakhri.sourceboost.exception.ValidationException;
+import io.sakhri.sourceboost.model.BoostModel;
 import io.sakhri.sourceboost.model.ResponseData;
 
 @Service

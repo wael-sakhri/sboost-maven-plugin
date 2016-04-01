@@ -1,9 +1,10 @@
-package io.sakhri.sourceboost.generic;
+package io.sakhri.sourceboost.generator.code;
 
 import io.sakhri.sourceboost.exception.ValidationException;
+import io.sakhri.sourceboost.model.BoostModel;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
 
-public interface BoostValidatorApi<E extends BoostModel> {
+public interface ValidatorApi<E extends BoostModel> {
 
 	/**
 	 * Test if the id is valid

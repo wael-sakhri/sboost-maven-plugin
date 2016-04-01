@@ -4,6 +4,7 @@ import javax.naming.OperationNotSupportedException;
 
 import org.springframework.stereotype.Service;
 
+import io.sakhri.sourceboost.model.BoostModel;
 import io.sakhri.sourceboost.model.ResponseData;
 
 

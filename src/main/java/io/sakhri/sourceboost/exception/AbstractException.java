@@ -2,7 +2,7 @@ package io.sakhri.sourceboost.exception;
 
 import org.springframework.http.HttpStatus;
 
-import io.sakhri.sourceboost.generic.BoostCodeGenerator;
+import io.sakhri.sourceboost.generator.code.CodeGenerator;
 import io.sakhri.sourceboost.model.ResponseData;
 import io.sakhri.sourceboost.type.CodeTypes;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
@@ -14,7 +14,7 @@ public abstract class AbstractException extends Exception {
 	 */
 	private static final long serialVersionUID = -8081247904283847409L;
 
-	private BoostCodeGenerator generator;
+	private CodeGenerator generator;
 
 	private String serviceCode;
 	private OperationCode operationCode;
@@ -25,7 +25,7 @@ public abstract class AbstractException extends Exception {
 	private Object target;
 
 	{
-		generator = new BoostCodeGenerator();
+		generator = new CodeGenerator();
 	}
 
 	public AbstractException(String serviceCode, CodeTypes.OperationCode operationCode, String message,
@@ -84,11 +84,11 @@ public abstract class AbstractException extends Exception {
 		this.status = status;
 	}
 
-	public BoostCodeGenerator getGenerator() {
+	public CodeGenerator getGenerator() {
 		return generator;
 	}
 
-	public void setGenerator(BoostCodeGenerator generator) {
+	public void setGenerator(CodeGenerator generator) {
 		this.generator = generator;
 	}
 

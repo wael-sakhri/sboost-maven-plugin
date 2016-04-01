@@ -11,13 +11,16 @@ import io.sakhri.sourceboost.exception.IdValidationException;
 import io.sakhri.sourceboost.exception.LabelValidationException;
 import io.sakhri.sourceboost.exception.RuntimeException;
 import io.sakhri.sourceboost.exception.ValidationException;
+import io.sakhri.sourceboost.generator.code.ValidatorApi;
+import io.sakhri.sourceboost.model.BoostIdentifiableModel;
+import io.sakhri.sourceboost.model.BoostModel;
 import io.sakhri.sourceboost.type.CodeTypes.AttributeCode;
 import io.sakhri.sourceboost.type.CodeTypes.OperationCode;
 import io.sakhri.sourceboost.type.CodeTypes.ValidatorCode;
 
 @Service
 public abstract class BoostAbstractService<E extends BoostModel>
-		implements BoostGenericServiceApi<E>, BoostValidatorApi<E> {
+		implements BoostGenericServiceApi<E>, ValidatorApi<E> {
 
 	@Override
 	public Collection<E> getAll() throws ValidationException, RuntimeException {

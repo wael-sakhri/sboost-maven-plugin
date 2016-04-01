@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.sakhri.sourceboost.model.BoostModel;
 import io.sakhri.sourceboost.model.ResponseData;
 
 @RestController
